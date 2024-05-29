@@ -1,0 +1,9 @@
+.ipynb_checkpoints
+video*
+README.pdf
+other*
+__pycache__
+.DS_Store
+archive*
+utils.py
+1*.ipynb
