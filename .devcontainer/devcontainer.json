@@ -6,7 +6,7 @@
   "waitFor": "onCreateCommand",
   "updateContentCommand": "python -m pip install -r requirements.txt",
   "postCreateCommand": "python -m ipykernel install --user --name devcontainer-kernel --display-name 'Python (devcontainer)'",
-  "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", //Set Terminal Prompt to $
+  "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", // Set Terminal Prompt to $
   "customizations": {
     "codespaces": {
       "openFiles": []
@@ -40,9 +40,11 @@
         },
         "jupyter.jupyterServer.kernel": "devcontainer-kernel", // Default kernel for Jupyter
         "jupyter.notebook.defaultKernel": "devcontainer-kernel", // Default kernel for notebooks
-        "python.pythonPath": "/usr/local/bin/python", // Default Python path
+        "python.pythonPath": "/usr/local/bin/python" // Default Python path
       },
       "remoteUser": "vscode"
     }
-  }
+  },
+  "initializeCommand": "apt-get update && apt-get install -y git-lfs && git lfs install",
+  "postAttachCommand": "git lfs pull"
 }
