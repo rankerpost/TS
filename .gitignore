@@ -7,3 +7,4 @@ __pycache__
 archive*
 utils.py
 1*.ipynb
+.solutions
