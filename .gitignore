@@ -8,3 +8,4 @@ archive*
 utils.py
 1*.ipynb
 .solutions
+.vscode
